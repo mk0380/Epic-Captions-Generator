@@ -9,15 +9,24 @@ export default function UploadForm() {
   const [isUploading, setIsUploading] = useState(false);
   const router = useRouter();
 
+  const config = {
+    api: {
+      bodyParser: {
+        sizeLimit: '20mb',
+      },
+    },
+  };
+
   async function upload(ev) {
     ev.preventDefault();
     const files = ev.target.files;
+
     if (files.length > 0) {
       const file = files[0];
       setIsUploading(true);
       const res = await axios.postForm('/api/upload', {
         file,
-      });
+      }, config);
       setIsUploading(false);
       const newName = res.data.newName;
       router.push('/'+newName);
