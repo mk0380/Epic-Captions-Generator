@@ -3,10 +3,10 @@ import {GetTranscriptionJobCommand, StartTranscriptionJobCommand, TranscribeClie
 
 function getClient() {
   return new TranscribeClient({
-    region: process.env.AWS_REGION,
+    region: process.env.AWS_REGIONAL,
     credentials: {
       accessKeyId: process.env.AWS_ACCESS_KEY,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+      secretAccessKey: process.env.AWS_SECRET_KEY,
     },
   });
 }
@@ -53,10 +53,10 @@ async function streamToString(stream) {
 async function getTranscriptionFile(filename) {
   const transcriptionFile = filename + '.transcription';
   const s3client = new S3Client({
-    region: process.env.AWS_REGION,
+    region: process.env.AWS_REGIONAL,
     credentials: {
       accessKeyId: process.env.AWS_ACCESS_KEY,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+      secretAccessKey: process.env.AWS_SECRET_KEY,
     },
   });
   const getObjectCommand = new GetObjectCommand({
