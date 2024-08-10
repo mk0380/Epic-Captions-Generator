@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  nextjs:
+    container_name: nextjs-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      AWS_ACCESS_KEY:
+      AWS_SECRET_ACCESS_KEY:
+      BUCKET_NAME:
+      AWS_REGION: 
+    volumes:
+      - app_data:/app
+      - app_node_modules:/app/node_modules
+
+volumes:
+  app_data:
+  app_node_modules:
