@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Automatic Video Caption Generator
 
-## Getting Started
+Automatically generate captions for short-form videos using ffmpeg and AWS S3, allowing customizable caption settings and high-quality video output.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Automatic Caption Generation:** Utilizes ffmpeg and AWS S3 to generate captions for short videos automatically.
+- **Customizable Captions:** Users can change captions as needed, including text and color.
+- **High-Quality Video Output:** Ensures no drop in video quality during the captioning process.
+- **Easy Integration:** Simple to integrate into existing workflows for video production.
+- **Flexible Deployment:** Can be deployed on various platforms with minimal configuration.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technology Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Frontend**: Next.js@14.2.3
+- **Backend**: Node.js@20.14.0 with Express
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  
+## Usage
 
-## Learn More
+### Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+- Install ffmpeg on your system.
+- Set up AWS S3 credentials for storage and retrieval of video files.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository:
 
-## Deploy on Vercel
+   ```bash
+   git clone https://github.com/mk0380/Epic-Captions-Generator.git
+   cd Epic-Captions-Generator
+2. **Create Environment Variables File (.env) file, with the help of .env.example**
+3. **Install Dependencies**
+   ```bash
+   npm install
+4. **Running the Application**
+   ```bash
+   npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Steps (Docker)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/mk0380/Epic-Captions-Generator.git
+   cd Epic-Captions-Generator
+2. **Fill the appropriate Environment Variables in the docker-compose.yml->environment file, with the help of .env.example**
+3. **Run**
+   ```bash
+   docker-compose up
+
