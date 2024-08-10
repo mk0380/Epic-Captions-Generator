@@ -10,6 +10,10 @@ Automatically generate captions for short-form videos using ffmpeg and AWS S3, a
 - **Easy Integration:** Simple to integrate into existing workflows for video production.
 - **Flexible Deployment:** Can be deployed on various platforms with minimal configuration.
 
+![alt text](assets/home.png)
+
+![alt text](assets/transcription.png)
+
 ## Technology Stack
 
 - **Frontend**: Next.js@14.2.3
