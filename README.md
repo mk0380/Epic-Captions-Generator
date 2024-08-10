@@ -49,3 +49,5 @@ Automatically generate captions for short-form videos using ffmpeg and AWS S3, a
    ```bash
    docker-compose up
 
+### Support
+  If you encounter any issues or have any questions, contact the project maintainer at [mayankkr21@iitk.ac.in].
